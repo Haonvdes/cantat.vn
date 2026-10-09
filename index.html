@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Cân Tất: app ghi phiếu cân nông sản cho thương lái và vựa. Cân từng bao, gửi phiếu qua Zalo, nông dân bấm Đồng ý là xong.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Cân Tất · Sắp ra mắt</title>
+<link rel="canonical" href="https://cantat.vn/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cantat.vn/">
+<meta property="og:site_name" content="Cân Tất">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Cân Tất · App cân nông sản cho thương lái và vựa">
+<meta property="og:description" content="Cân từng bao trên điện thoại. Gửi phiếu qua Zalo, nông dân bấm Đồng ý là xong.">
+<meta property="og:image" content="https://cantat.vn/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cân Tất: app cân nông sản cho thương lái và vựa, sắp có rồi.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Chakra+Petch:wght@600;700&display=swap">
+<style>
+/* Layout: một màn hình — chữ và nút bên trái, màn cân điện tử "đang chờ" bên phải; điện thoại xếp một cột */
+:root{
+  --bg:#F6F8F2; --surface:#FFFFFF; --soft:#EEF2EC; --ink:#15201A; --muted:#4A574E; --line:#D6DFD2;
+  --green:#1F7A3A; --green-ink:#FFFFFF; --green-deep:#155C2B;
+  --lcd-bg:#16221A; --lcd:#D7F27A; --lcd-dim:#9DB59F; --furrow:rgba(31,122,58,.07);
+  --f-display:'Bricolage Grotesque','Be Vietnam Pro',system-ui,sans-serif;
+  --f-body:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-num:'Chakra Petch','Be Vietnam Pro',ui-monospace,monospace;
+  --gutter:max(16px,4vw);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1612; --surface:#17201A; --soft:#1D2B21; --ink:#E9F0E8; --muted:#A8B7AB; --line:#2C3A30;
+  --green:#5CC27A; --green-ink:#0B1A10; --green-deep:#7BD495;
+  --lcd-bg:#0A100C; --lcd:#D7F27A; --lcd-dim:#7E9682; --furrow:rgba(92,194,122,.06); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1612; --surface:#17201A; --soft:#1D2B21; --ink:#E9F0E8; --muted:#A8B7AB; --line:#2C3A30;
+  --green:#5CC27A; --green-ink:#0B1A10; --green-deep:#7BD495;
+  --lcd-bg:#0A100C; --lcd:#D7F27A; --lcd-dim:#7E9682; --furrow:rgba(92,194,122,.06); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:19px;line-height:1.6}
+.page{min-height:100svh;display:flex;flex-direction:column;padding-inline:var(--gutter);background:
+  repeating-linear-gradient(-28deg,transparent 0 46px,var(--furrow) 46px 48px),var(--soft)}
+.top,.main,.foot{width:100%;max-width:1200px;margin-inline:auto}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:24px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--green);color:var(--green-ink)}
+.logo b{font-family:var(--f-display);font-size:28px;font-weight:800;letter-spacing:-.02em}
+.main{flex:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-block:32px 56px}
+.copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.tag{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:16px;font-weight:700;color:var(--green)}
+.dot{width:10px;height:10px;border-radius:999px;background:var(--green);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+h1{margin:0;font-family:var(--f-display);font-size:clamp(42px,5.8vw,78px);line-height:1.08;font-weight:800;letter-spacing:-.035em;text-wrap:balance}
+h1 span{color:var(--green)}
+.lead{margin:0;font-size:21px;max-width:560px}
+.points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;margin:0;padding:22px 0 0;list-style:none;border-top:1px solid var(--line)}
+.points li{display:flex;align-items:center;gap:14px;font-size:20px;font-weight:700;line-height:1.3}
+.points i{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:999px;background:var(--green);color:var(--green-ink);font-style:normal;font-size:15px}
+
+.scale{display:flex;flex-direction:column;align-items:center;min-width:0}
+.display{width:100%;max-width:440px;border-radius:24px;background:var(--lcd-bg);padding:28px 28px 24px;display:flex;flex-direction:column;gap:10px;border:10px solid var(--ink);box-shadow:0 30px 60px -30px rgba(21,32,26,.5)}
+.display-top{display:flex;justify-content:space-between;color:var(--lcd-dim);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.reading{font-family:var(--f-num);font-size:clamp(64px,8vw,104px);line-height:1;color:var(--lcd);font-variant-numeric:tabular-nums;text-align:right}
+.reading small{font-size:.38em;margin-left:8px}
+.wait{animation:blink 1.6s ease-in-out infinite}
+.display-foot{display:flex;justify-content:flex-end;color:var(--lcd-dim);font-size:15px}
+.base{width:78%;max-width:340px;height:26px;background:var(--ink);border-radius:0 0 18px 18px}
+
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}
+
+@media (max-width: 900px){
+  .main{grid-template-columns:minmax(0,1fr);gap:40px;padding-block:16px 48px}
+  .scale{order:-1}
+}
+@media (max-width: 520px){
+  body{font-size:18px}
+  .points{grid-template-columns:minmax(0,1fr)}
+  .display{padding:20px}
+}
+@media (prefers-reduced-motion: reduce){.dot,.wait{animation:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <span class="logo">
+      <span class="logo-mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20l1.5-9h9L18 20"/><circle cx="12" cy="7" r="3"/><path d="M12 5.5V7"/></svg></span>
+      <b>Cân Tất</b>
+    </span>
+  </header>
+
+  <main class="main">
+    <div class="copy">
+      <span class="tag"><span class="dot" aria-hidden="true"></span>Sắp ra mắt</span>
+      <h1>App cân nông sản cho thương lái và vựa <span>sắp có rồi.</span></h1>
+      <p class="lead">Cân từng bao ngay trên điện thoại. Gửi phiếu qua Zalo. Nông dân bấm <b>Đồng ý</b> là xong, hai bên khỏi cãi nhau.</p>
+      <ul class="points">
+        <li><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></i>Miễn phí</li>
+        <li><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.7-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.3 6-4zm0 0c2 2.7 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.3-6 4z"/></svg></i>Không giới hạn số phiếu</li>
+        <li><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 4.2-2.7M10.7 5.1A15 15 0 0 1 22 8.8M5 12.9a10 10 0 0 1 5.2-2.8M19 12.9a10 10 0 0 0-1.6-1.2M12 20h.01"/></svg></i>Không có sóng vẫn cân</li>
+        <li><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10-5 5V2l5 5L7 17"/></svg></i>Kết nối cân Bluetooth</li>
+      </ul>
+    </div>
+
+    <div class="scale" aria-label="Màn hình cân điện tử đang chờ ra mắt">
+      <div class="display">
+        <div class="display-top"><span>Cân Tất</span><span>Đang chuẩn bị</span></div>
+        <div class="reading"><span class="wait">--,-</span><small>kg</small></div>
+        <div class="display-foot"><span>Sắp lên App Store</span></div>
+      </div>
+      <div class="base" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Cân Tất · Zalo: <b>0907 915 146</b></span>
+  </footer>
+</div>
+</body>
+</html>
