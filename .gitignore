@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+.idea/
+
+# node (nếu sau này dùng công cụ build)
+node_modules/
+dist/
+
+# env
+.env*
+gioi-thieu.html
+index-v2.html
+index-v3.html

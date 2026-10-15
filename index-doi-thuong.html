@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Cân Tất: app ghi phiếu cân nông sản cho thương lái và vựa. Cân từng bao, gửi phiếu qua Zalo, nông dân bấm Đồng ý là xong.">
+<title>Cân Tất · Cân xong một ngày, nhẹ lòng cả hai</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cantat.vn/">
+<meta property="og:site_name" content="Cân Tất">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Cân Tất · Cân xong một ngày, nhẹ lòng cả hai">
+<meta property="og:description" content="Cân từng bao trên điện thoại. Gửi phiếu qua Zalo, nông dân bấm Đồng ý là xong.">
+<meta property="og:image" content="https://cantat.vn/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cân Tất: app cân nông sản cho thương lái và vựa, sắp có rồi.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Chakra+Petch:wght@600;700&display=swap">
+<style>
+[hidden]{display:none!important}
+:root{
+  --bg:#F6F8F2; --surface:#FFFFFF; --soft:#EEF2EC; --ink:#15201A; --muted:#4A574E; --line:#D6DFD2;
+  --green:#1E7A3C; --green-ink:#FFFFFF; --green-deep:#155C2B;
+  --lcd-bg:#16221A; --lcd:#D7F27A; --lcd-dim:#9DB59F; --furrow:rgba(31,122,58,.07);
+  --f-display:'Outfit','Be Vietnam Pro',system-ui,sans-serif;
+  --f-body:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-num:'Chakra Petch','Be Vietnam Pro',ui-monospace,monospace;
+  --gutter:max(16px,4vw);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1612; --surface:#17201A; --soft:#1D2B21; --ink:#E9F0E8; --muted:#A8B7AB; --line:#2C3A30;
+  --green:#5CC27A; --green-ink:#0B1A10; --green-deep:#7BD495;
+  --lcd-bg:#0A100C; --lcd:#D7F27A; --lcd-dim:#7E9682; --furrow:rgba(92,194,122,.06); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1612; --surface:#17201A; --soft:#1D2B21; --ink:#E9F0E8; --muted:#A8B7AB; --line:#2C3A30;
+  --green:#5CC27A; --green-ink:#0B1A10; --green-deep:#7BD495;
+  --lcd-bg:#0A100C; --lcd:#D7F27A; --lcd-dim:#7E9682; --furrow:rgba(92,194,122,.06); color-scheme:dark}
+
+
+
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;font:18px/1.7 var(--f-body);background:var(--bg);color:var(--ink)}main{overflow-x:hidden;width:100%;max-width:100%}a{color:inherit}button{font:inherit;cursor:pointer}a,button{-webkit-tap-highlight-color:transparent}svg{width:28px;height:28px;flex:none}img{display:block;width:100%;height:100%;object-fit:cover}h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-family:var(--f-display);letter-spacing:-.045em;line-height:1.12}h1{font-weight:600}h2{font-size:clamp(36px,4.1vw,62px);font-weight:600}h3{font-size:28px;font-weight:600}button:focus-visible,a:focus-visible{outline:3px solid var(--green);outline-offset:5px}.shell{width:min(1280px,calc(100% - 96px));margin-inline:auto}.navigation{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:inline-flex;align-items:center;gap:11px;font:800 28px var(--f-display);text-decoration:none;letter-spacing:-.035em;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--green);color:var(--green-ink)}.brand-mark svg{width:26px;height:26px}.navigation nav{display:flex;align-items:center;gap:32px}.navigation nav a{font-size:16px;text-decoration:none;position:relative}.navigation nav a:after{content:'';position:absolute;bottom:-5px;left:0;right:100%;height:1px;background:var(--green);transition:right .3s}.navigation nav a:hover:after{right:0}.icon-button{display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:50%;transition:background .3s,transform .3s}.icon-button svg{width:22px;height:22px}.icon-button:hover{background:var(--soft);transform:translateY(-2px)}.button{display:inline-flex;align-items:center;justify-content:center;gap:28px;min-height:58px;padding:15px 24px;background:var(--green);color:var(--green-ink);border:1px solid var(--green);border-radius:9px;text-decoration:none;font-size:16px;font-weight:700;transition:background .3s,transform .3s}.button:hover{transform:translateY(-3px);background:var(--green-deep)}.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}.button.secondary:hover{background:var(--soft)}.actions{display:flex;gap:12px;flex-wrap:wrap}.muted{color:var(--muted)}.section{padding-block:140px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:60px;margin-bottom:48px}.section-heading>p{max-width:380px;color:var(--muted)}.media-window{overflow:hidden;position:relative}.media-window img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}.media-window:hover img{transform:scale(1.035)}.inline-photo{display:inline-block;width:100px;height:48px;border-radius:40px;overflow:hidden;vertical-align:middle;margin-inline:10px}.inline-photo img{object-position:50% 65%}.bento{display:grid;grid-auto-flow:dense}.receipt{padding:28px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px}.receipt-header{display:flex;justify-content:space-between;gap:12px;font-size:16px;border-bottom:1px dashed var(--line);padding-bottom:18px}.receipt-header>span,.receipt-date{color:var(--muted)}.receipt h3{font-size:27px;margin-top:20px}.receipt-date{font-size:16px;margin-top:8px}.receipt dl{margin:24px 0 0}.receipt dl>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:10px;font-size:16px}.receipt dt{color:var(--muted)}.receipt dd{margin:0;font:600 23px/1.3 var(--f-num);white-space:nowrap}.receipt .receipt-total{padding-top:16px;margin-top:20px;border-top:1px dashed var(--line)}.receipt .receipt-total dd{font-size:30px}.receipt-state{margin-top:22px;font-size:16px;color:var(--green)}.footer{display:flex;justify-content:space-between;align-items:start;gap:30px;padding-block:54px 30px;font-size:16px}.footer>div{text-align:center;color:var(--muted)}.footer a{text-decoration:none}.photo-credit{font-size:16px;color:var(--muted);padding-bottom:32px}.photo-credit p{max-width:940px}.skip{position:fixed;z-index:100;left:20px;top:-100px;background:var(--surface);padding:12px}.skip:focus{top:20px}.availability{font-size:16px;color:var(--muted);margin-top:18px}.cta-panel h2{max-width:900px}.cta-panel p{margin:25px 0 30px;max-width:540px}.cta-panel .button{background:var(--lcd);border-color:var(--lcd);color:var(--lcd-bg)}.cta-panel .button:hover{background:var(--surface)}
+@media(max-width:1000px){.shell{width:calc(100% - 64px)}.navigation nav{gap:20px}.section{padding-block:100px}.section-heading{gap:35px}.footer{flex-wrap:wrap}.footer>div{text-align:left}}
+@media(max-width:650px){.shell{width:calc(100% - 36px)}body{font-size:17px}.navigation{min-height:82px;gap:16px}.brand{font-size:25px}.brand-mark{width:38px;height:38px}.navigation nav{gap:12px}.navigation nav>a{display:none}.section{padding-block:76px}.section-heading{display:block;margin-bottom:30px}.section-heading>p{margin-top:20px}h2{font-size:37px}.inline-photo{width:65px;height:35px;margin-inline:6px}.actions{flex-direction:column}.actions .button{width:100%}.receipt{padding:22px}.receipt h3{font-size:25px}.receipt dd{font-size:20px}.receipt .receipt-total dd{font-size:27px}.footer{flex-direction:column;padding-top:36px;gap:24px}.footer>div{text-align:left}.photo-credit{font-size:16px}.availability{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+.navigation{border-bottom:1px dashed var(--line)}.everyday-hero{padding-top:46px;text-align:center}.everyday-hero h1{max-width:72rem;margin-inline:auto;font-size:clamp(50px,5.6vw,80px);line-height:1.13;font-weight:500}.everyday-hero h1 span{display:block;color:var(--green)}.everyday-hero .intro{max-width:640px;font-size:19px;color:var(--muted);margin:24px auto 28px}.everyday-hero .actions{justify-content:center}.everyday-hero .button{border-radius:50px;padding-inline:28px}.harvest-gallery{margin-top:44px}.harvest-photo{height:510px;border-radius:48px;isolation:isolate}.harvest-photo img{object-position:50% 58%}.harvest-caption{display:flex;justify-content:space-between;align-items:center;gap:30px;text-align:left;padding-block:18px;border-bottom:1px dashed var(--line)}.harvest-caption p{font-size:16px;color:var(--muted)}.harvest-caption strong{display:block;color:var(--ink);font-size:17px;font-weight:500}.gallery-buttons{display:flex;gap:8px}.earth-heading{text-align:center;max-width:920px;margin:0 auto 55px}.earth-heading h2{font-weight:500;line-height:1.2}.earth-heading>p{max-width:600px;margin:24px auto 0;color:var(--muted)}.everyday-benefits{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}.everyday-benefits article{padding-top:26px;border-top:1px solid var(--line)}.everyday-benefits svg{width:32px;height:32px;color:var(--green);margin-bottom:26px}.everyday-benefits h3{font-size:28px;line-height:1.2;font-weight:500;margin-bottom:18px}.everyday-benefits p{font-size:17px;color:var(--muted)}.field-story{background:var(--soft)}.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}.story-photo{height:670px;border-radius:6px}.story-photo img{object-position:50% 38%}.story-caption{color:var(--muted);font-size:16px;margin-top:14px}.story-copy h2{font-weight:500;margin-bottom:40px}.story-step{padding-block:25px;border-top:1px solid var(--line)}.story-step h3{font-weight:500;font-size:29px;margin-bottom:16px}.story-step p{font-size:17px;color:var(--muted)}.story-copy .receipt{margin-top:28px;border-radius:3px;transform:rotate(-2deg);box-shadow:0 15px 30px -30px var(--ink)}.story-copy .receipt h3{font-weight:600}.field-marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:27px;color:var(--green);font:500 clamp(32px,4vw,54px)/1.2 var(--f-display);letter-spacing:-.03em}.marquee-track{width:max-content;display:flex;animation:drift 36s linear infinite}.marquee-track span{padding-right:45px}.marquee-track span:after{content:' /';margin-left:45px;color:var(--line)}@keyframes drift{to{transform:translateX(-50%)}}.marquee-track:hover{animation-play-state:paused}.everyday-cta{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.cta-garden{height:500px;border-radius:48% 48% 5px 5px;overflow:hidden}.everyday-cta h2{font-weight:500;font-size:clamp(38px,4.1vw,59px);line-height:1.2}.everyday-cta p{max-width:500px;color:var(--muted);margin:24px 0 30px}.everyday-cta .button{border-radius:50px}.everyday-cta .contact-number{font-size:16px;margin-top:18px}.everyday-cta .contact-number a{text-decoration:none}.footer{border-top:1px dashed var(--line)}
+@media(max-width:1000px){.harvest-photo{height:460px}.everyday-benefits{gap:30px}.story-grid{gap:48px}.story-photo{height:600px}.everyday-cta{gap:48px}.cta-garden{height:450px}}
+@media(max-width:800px){.story-grid{grid-template-columns:1fr;gap:45px}.story-visual{max-width:100%}.story-photo{height:480px}.story-photo img{object-position:50% 38%}.everyday-benefits{gap:24px}.everyday-benefits h3{font-size:25px}.everyday-cta{grid-template-columns:1fr;gap:40px}.cta-garden{height:360px;border-radius:6px}.everyday-cta>div{max-width:600px}.everyday-cta h2{font-size:45px}}
+@media(max-width:650px){.everyday-hero{padding-top:34px}.everyday-hero h1{font-size:clamp(33px,8.9vw,54px);letter-spacing:-.045em}.everyday-hero .intro{font-size:18px;margin-block:22px 26px;max-width:33ch}.harvest-gallery{margin-top:32px}.harvest-photo{height:380px;border-radius:28px}.harvest-photo img{object-position:50% 55%}.harvest-caption{gap:16px;align-items:start}.harvest-caption strong{font-size:16px}.harvest-caption p{font-size:16px}.gallery-buttons{gap:6px}.gallery-buttons .icon-button{width:44px;height:44px}.earth-heading{text-align:left;margin-bottom:32px}.earth-heading h2{font-size:36px}.everyday-benefits{grid-template-columns:1fr;gap:28px}.everyday-benefits article{padding-top:24px}.everyday-benefits svg{margin-bottom:18px}.everyday-benefits h3{font-size:28px;margin-bottom:12px}.story-photo{height:420px}.story-copy h2{font-size:38px;margin-bottom:30px}.story-step h3{font-size:28px}.story-copy .receipt{margin-inline:5px}.field-marquee{padding-block:20px;font-size:32px}.marquee-track span{padding-right:28px}.marquee-track span:after{margin-left:28px}.cta-garden{height:330px}.everyday-cta h2{font-size:38px}.everyday-cta .button{width:100%}.everyday-cta p{margin-top:20px}}
+
+/* Shared option-03b outline; the existing green token adapts to both themes. */
+.brand{min-height:44px;flex:none}
+.brand-logo{display:block;flex:none;width:190px;height:auto;aspect-ratio:1137.0408 / 255.88361204013376;background:var(--green);-webkit-mask:url("assets/logo-green.svg") center / contain no-repeat;mask:url("assets/logo-green.svg") center / contain no-repeat}
+.ticket-top .brand-logo{width:112px}
+.footer .brand-logo{width:154px}
+@media(max-width:650px){.brand-logo{width:166px}}
+</style>
+</head>
+<body>
+<div id="top"></div><a class="skip" href="#main">Đến nội dung chính</a><header class="navigation shell"><a class="brand" href="#top" aria-label="Cân Tất, về đầu trang"><span class="brand-logo" aria-hidden="true"></span></a><nav aria-label="Điều hướng chính"><a href="#benefits">Có gì tiện?</a><a href="#how">Cách dùng</a><a class="variant-link" href="index-hien-dai.html">Bản hiện đại ↗</a><button class="theme icon-button" aria-label="Đổi sang giao diện tối" title="Đổi giao diện"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1 1M18 18l1 1M5 19l1-1M18 6l1-1"/></svg></button></nav></header><main id="main"><section class="everyday-hero shell"><h1>Cân xong một ngày.<span>Nhẹ lòng cả hai.</span></h1><p class="intro">Anh lo thu mua. Bà con lo mùa vụ.<br>Chuyện ghi cân, tính tiền, để Cân Tất phụ một tay.</p><div class="actions"><a class="button" href="https://zalo.me/0907915146">Nhắn Zalo khi ra mắt<span aria-hidden="true">↗</span></a><a class="button secondary" href="#benefits">Cân Tất giúp được gì?<span aria-hidden="true">↓</span></a></div><p class="availability">App cho thương lái và vựa · Đang chuẩn bị ra mắt trên iPhone</p><div class="harvest-gallery"><figure class="media-window harvest-photo"><img src="assets/concepts/harvest-da-nang.webp" alt="Nông dân thu hoạch rau xanh giữa những luống vườn tại Đà Nẵng" width="1800" height="1200" id="gallery-image" fetchpriority="high"></figure><div class="harvest-caption"><div aria-live="polite"><strong id="gallery-title">Một ngày ngoài vườn rau.</strong><p id="gallery-credit" hidden>Đà Nẵng · Ảnh: Nhà văn / Pexels</p></div><div class="gallery-buttons"><button class="icon-button gallery-prev" aria-label="Ảnh vườn trước">←</button><button class="icon-button gallery-next" aria-label="Ảnh vườn tiếp theo">→</button></div></div></div></section>
+<section class="section shell" id="benefits"><div class="earth-heading"><h2>Mồ hôi ngoài <span class="inline-photo"><img src="assets/concepts/garden-hoi-an.webp" alt="Rau xanh trong vườn Hội An" width="1800" height="1200" loading="lazy"></span> ruộng.<br>Số ký phải rõ ràng.</h2><p>Mỗi bao rau là công sức của bà con.<br>Ghi cho đủ, tính cho rõ, để hai bên yên tâm.</p></div><div class="bento everyday-benefits"><article><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><h3>Khỏi vừa cân,<br>vừa cộng sổ.</h3><p>Nhập số ký từng bao trên điện thoại. Cân Tất cộng tổng, trừ bì và tính thành tiền khi có giá.</p></article><article><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M3 8a16 16 0 0 1 3-2M10 5a16 16 0 0 1 11 3M6 12a10 10 0 0 1 4-2M18 12l-1-1M9 16a5 5 0 0 1 6 0M12 20h.01"/></svg><h3>Ngoài vườn mất sóng,<br>vẫn ghi bình thường.</h3><p>Phiếu được lưu ngay trên máy. Có mạng trở lại thì đồng bộ, anh không cần chờ để cân tiếp.</p></article><article><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3L9 15M21 3l-6 18-4-8-8-4 18-6z"/></svg><h3>Gửi bà con xem,<br>cùng nhau xác nhận.</h3><p>Một link qua Zalo là xem được phiếu. Đúng thì Đồng ý, có chỗ chưa khớp thì Báo sai.</p></article></div></section>
+<section class="field-story" id="how"><div class="section shell story-grid"><div class="story-visual"><figure class="media-window story-photo"><img src="assets/concepts/farmer-tien-giang.webp" alt="Người nông dân đang làm việc trong vườn tại Tiền Giang" width="1800" height="1200" loading="lazy"></figure><p class="story-caption">Một buổi làm vườn ở Tiền Giang.<span hidden><br>Ảnh: Tien Nguyen / Pexels</span></p></div><div class="story-copy"><h2>Cũng như mọi bữa.<br>Chỉ bớt cuốn sổ.</h2><article class="story-step"><h3>Đặt bao lên cân.<br>Ghi số ký vào máy.</h3><p>Chọn người, chọn loại rau rồi ghi từng bao. Muốn sửa một bao, chạm vào bao đó là được.</p></article><article class="story-step"><h3>Cân xong, coi lại phiếu.</h3><p>Số bao, khối lượng, trừ bì, đơn giá. Kiểm tra rồi chốt phiếu; đủ giá mới gửi.</p></article><article class="story-step"><h3>Có mạng, gửi qua Zalo.</h3><p>Bà con mở link xem và xác nhận. Không cần cài thêm app. Phiếu lưu lại để lần sau còn đối chiếu.</p><article class="receipt" aria-label="Phiếu cân minh họa"><div class="receipt-header"><b>PHIẾU CÂN</b><span>Minh họa</span></div><h3>Chú Ba · Cải bắp</h3><p class="receipt-date">15/10 · 3 bao · Trừ bì 0 kg</p><dl><div><dt>Tổng cân</dt><dd>153,4 kg</dd></div><div><dt>Khối lượng tính tiền</dt><dd>153,4 kg</dd></div><div><dt>Đơn giá</dt><dd>6.000đ/kg</dd></div><div class="receipt-total"><dt>Thành tiền</dt><dd>920.400đ</dd></div></dl><p class="receipt-state">Phiếu mẫu · Đã ghi đủ 3 bao</p></article></article></div></div></section>
+<div class="field-marquee" aria-label="Ghi đủ từng bao. Tính rõ từng đồng. Cùng nhau xác nhận."><div class="marquee-track" aria-hidden="true"><span>Ghi đủ từng bao</span><span>Tính rõ từng đồng</span><span>Cùng nhau xác nhận</span><span>Ghi đủ từng bao</span><span>Tính rõ từng đồng</span><span>Cùng nhau xác nhận</span></div></div>
+<section class="section shell everyday-cta"><figure class="media-window cta-garden"><img src="assets/concepts/garden-hoi-an.webp" alt="Những luống rau xanh tươi trong vườn Hội An" width="1800" height="1200" loading="lazy"></figure><div><h2>Vụ tới, mình<br>thử cách ghi mới.</h2><p>Vẫn những người quen, vẫn buổi cân ngoài vườn. Thêm một cách để chuyện số ký, số tiền được rõ ràng hơn.</p><a class="button" href="https://zalo.me/0907915146">Nhắn Cân Tất để được báo khi ra mắt<span aria-hidden="true">↗</span></a><p class="contact-number">Zalo: <a href="https://zalo.me/0907915146">0907 915 146</a></p></div></section></main><footer class="footer shell"><a class="brand" href="#top" aria-label="Cân Tất, về đầu trang"><span class="brand-logo" aria-hidden="true"></span></a><div><p>Ghi đủ từng bao. Rõ ràng từng phiếu.</p><p>© 2026 Cân Tất · <a href="https://zalo.me/0907915146">0907 915 146</a></p></div><a href="index-hien-dai.html">Xem bản hiện đại ↗</a></footer><div class="photo-credit shell" hidden><p>Ảnh minh họa: <a href="https://www.pexels.com/photo/farmer-harvesting-in-organic-vegetable-farm-da-nang-36866800/">Nhà văn</a>, <a href="https://www.pexels.com/photo/a-man-in-a-hat-and-shirt-picking-up-vegetables-27865782/">Tien Nguyen / Pexels</a> và <a href="https://unsplash.com/photos/HeqXGxnsnX4">Markus Winkler / Unsplash</a>.</p></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+
+const themeButton = document.querySelector('.theme');
+const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+function updateThemeLabel() {
+ const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : systemTheme.matches;
+ themeButton.setAttribute('aria-label', dark ? 'Đổi sang giao diện sáng' : 'Đổi sang giao diện tối');
+}
+themeButton.addEventListener('click', () => {
+ const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : systemTheme.matches;
+ document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+ updateThemeLabel();
+});
+systemTheme.addEventListener('change', updateThemeLabel);
+updateThemeLabel();
+
+const photos = [
+ { src: 'assets/concepts/harvest-da-nang.webp', alt: 'Nông dân thu hoạch rau xanh tại Đà Nẵng', title: 'Một ngày ngoài vườn rau.', credit: 'Đà Nẵng · Ảnh: Nhà văn / Pexels' },
+ { src: 'assets/concepts/farmer-tien-giang.webp', alt: 'Nông dân làm vườn tại Tiền Giang', title: 'Những công việc quen mỗi ngày.', credit: 'Tiền Giang · Ảnh: Tien Nguyen / Pexels' },
+ { src: 'assets/concepts/garden-hoi-an.webp', alt: 'Luống rau xanh tại Hội An', title: 'Từ những luống rau xanh.', credit: 'Hội An · Ảnh: Markus Winkler / Unsplash' }
+];
+let photoIndex = 0;
+function movePhoto(delta) {
+ photoIndex = (photoIndex + delta + photos.length) % photos.length;
+ const next = photos[photoIndex];
+ const image = document.querySelector('#gallery-image');
+ image.src = next.src;
+ image.alt = next.alt;
+ document.querySelector('#gallery-title').textContent = next.title;
+ document.querySelector('#gallery-credit').textContent = next.credit;
+}
+document.querySelector('.gallery-prev').addEventListener('click', () => movePhoto(-1));
+document.querySelector('.gallery-next').addEventListener('click', () => movePhoto(1));
+
+if (window.gsap && window.ScrollTrigger) {
+ gsap.registerPlugin(ScrollTrigger);
+ const motion = gsap.matchMedia();
+ motion.add('(prefers-reduced-motion: no-preference)', () => {
+  document.querySelectorAll('.harvest-photo, .cta-garden').forEach(media => {
+   gsap.fromTo(media.querySelector('img'), { scale: 1.08 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: media, start: 'top bottom', end: 'top 40%', scrub: true } });
+   gsap.to(media.querySelector('img'), { opacity: .2, ease: 'none', scrollTrigger: { trigger: media, start: 'bottom 5%', end: 'bottom top', scrub: true } });
+  });
+ });
+ motion.add('(min-width: 1001px) and (prefers-reduced-motion: no-preference)', () => {
+  ScrollTrigger.create({ trigger: '.story-visual', start: 'top 100px', endTrigger: '.story-copy', end: 'bottom 85%', pin: true, pinSpacing: false });
+ });
+}
+</script>
+</body>
+</html>
